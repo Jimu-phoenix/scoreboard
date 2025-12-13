@@ -1,0 +1,15 @@
+.lander{
+    display: flex;
+    flex-direction: column;
+    height: 95vh;
+    justify-content: space-between;
+    padding: 0;
+}
+p{
+    font-size: .75rem;
+}
+/* .content a{
+    padding: 5px 10px;
+    border: solid 1px grey;
+    border-radius: 20px;
+} */
