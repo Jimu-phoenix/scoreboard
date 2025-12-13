@@ -1,9 +1,42 @@
+.sbcontainer{
+    z-index: 0;
+}
 .scoreboard{
     display: flex;
     justify-content: space-between;
-    width: 95vw;
+    width: 100%;
 }
 .score1, .score2{
     display: flex;
     flex-direction: column;
+}
+.actions{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+.actions button{
+    max-height: 60px;
+    max-width: 450px;
+}
+@media screen and (max-width: 780px) {
+.scoreboard{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 95vw;
+}
+hr{
+    margin-top: 35px;
+    width: 150px;
+}
+.score1, .score2{
+    display: flex;
+    flex-direction: column;
+}
+.close{
+    margin-top: 20px;
+}
 }

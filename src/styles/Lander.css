@@ -13,3 +13,13 @@ p{
     border: solid 1px grey;
     border-radius: 20px;
 } */
+
+@media screen and (max-width: 780px) {
+.lander{
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+    justify-content: space-between;
+    padding: 0;
+}
+}
