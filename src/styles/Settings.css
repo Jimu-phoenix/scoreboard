@@ -1,0 +1,53 @@
+.top{
+    display: flex;
+    width: 50vw;
+    justify-content: space-between;
+    align-items: center;
+}
+.top button{
+    max-height: 50px;
+    align-self: center;
+}
+hr{
+    transform: rotate(180);
+}
+.specSet{
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    /* align-items: center; */
+    width: 95vw;
+}
+.types{
+    width: 30vw;
+    height: 40vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+.types button{
+    /* width: 20px; */
+    width: 200px;
+    height: 65px;
+    font-size: 1.25rem;
+}
+.p2, .t2 ,.ovo{
+    width: 40vw;
+}
+.t2 .options button{
+    margin: 5px;
+}
+.ovo .options button{
+    margin: 5px;
+}
+.TeamxName{
+    margin-top: 10px;
+}
+.TeamxName input{
+    height: 30px;
+    margin-left: 3px;
+}
+.done{
+    margin-top: 10px;
+}
