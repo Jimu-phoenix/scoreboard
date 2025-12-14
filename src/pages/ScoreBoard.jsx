@@ -107,7 +107,7 @@ export default function ScoreBoard(){
                 fontSize={115}
                 padding={5}
                 gap={10}
-                textColor="white"
+                textColor={counterColor}
                 fontWeight={900}
                 gradientFrom='transparent'
                 gradientTo='transparent'
