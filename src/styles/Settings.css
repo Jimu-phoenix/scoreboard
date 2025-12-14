@@ -51,6 +51,11 @@ hr{
 .done{
     margin-top: 10px;
 }
+.selected{
+    border-color: grey;
+    background-color: grey;
+    color: white;
+}
 
 @media screen and (max-width: 780px) {
 .top{

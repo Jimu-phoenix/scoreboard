@@ -20,3 +20,9 @@
 .dispose{
     display: none;
 }
+@media screen and (max-width: 780px) {
+    .winner{
+        width: 350px;
+        height: 350px;
+    }
+}

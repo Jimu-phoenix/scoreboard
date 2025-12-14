@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Counter from '../components/Counter';
 import { useNavigate } from "react-router-dom";
 import { useLocation } from 'react-router-dom';
@@ -13,26 +13,41 @@ export default function ScoreBoard(){
      const [showwinner, setShowWinner] = useState(false);
      const [num2, setNum2] = useState(0);
      const location = useLocation();
-     const { team1, team2 } = location.state || {gameObj: {
-        team1: 'Team'
-     }};
+     const { team1, team2, pointsValue } = location.state || {
+        team1: 'Team A',
+        team2: 'Team B',
+        pointsValue: 1
+     };
+
+     const [isDarkMode, setIsDarkMode] = useState(
+        window.matchMedia('(prefers-color-scheme: dark)').matches
+    );
+
+    useEffect(() => {
+        const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+        const handleChange = (e) => setIsDarkMode(e.matches);
+        mediaQuery.addEventListener('change', handleChange);
+        return () => mediaQuery.removeEventListener('change', handleChange);
+    }, []);
+
+    const counterColor = isDarkMode ? 'white' : '#213547';
 
     const increase = (n) => {
         if (n === 1){
-            setNum1(num1 + 1)
+            setNum1(num1 + pointsValue)
         }
         else {
-            setNum2(num2 + 1)
+            setNum2(num2 + pointsValue)
         }
         console.log(team1)
     }
 
     const decrease = (n) => {
         if (n === 1){
-            setNum1(num1 - 1)
+            setNum1(num1 - pointsValue)
         }
         else {
-            setNum2(num2 - 1)
+            setNum2(num2 - pointsValue)
         }
         
     }
@@ -66,7 +81,7 @@ export default function ScoreBoard(){
                 fontSize={115}
                 padding={5}
                 gap={10}
-                textColor="white"
+                textColor={counterColor}
                 fontWeight={900}
                 gradientFrom='transparent'
                 gradientTo='transparent'

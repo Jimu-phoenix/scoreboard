@@ -7,6 +7,8 @@ export default function Settings(){
 
     
     const [type, setType] = useState('');
+    const [points, setPoints] = useState(1);
+    const [selected, setSelected] = useState(1);
     const navigate = useNavigate();
 
 
@@ -24,8 +26,13 @@ export default function Settings(){
         }
         navigate('/scores', { state: {
             team1: e.target.Team1.value,
-            team2: e.target.Team2.value
+            team2: e.target.Team2.value,
+            pointsValue: points
         } })
+    }
+
+    const SetPointsValue = (n) => {
+        setPoints(n);
     }
 
     return(
@@ -56,10 +63,10 @@ export default function Settings(){
                 <div className="t2">
                     <h2>Points per Round</h2>
                     <div className="options">
-                        <button>1</button>
-                        <button>2</button>
-                        <button>3</button>
-                        <button>5</button>
+                        <button onClick={() => SetPointsValue(1)} className={points === 1 ? "selected" : ''}>1</button>
+                        <button onClick={() => SetPointsValue(2)} className={points === 2 ? "selected" : ''}>2</button>
+                        <button onClick={() => SetPointsValue(3)} className={points === 3 ? "selected" : ''}>3</button>
+                        <button onClick={() => SetPointsValue(5)} className={points === 5 ? "selected" : ''}>5</button>
                     </div>
                     <form className="teamNames" id='teamNames' onSubmit={(e) => submitForm(e)}>
 
