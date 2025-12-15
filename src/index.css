@@ -6,6 +6,8 @@
   color-scheme: light dark;
   --text-color: white;
   --modal-bg: rgb(48, 48, 48);
+  --rcounter: grey;
+  --rcounter-bg: rgb(49, 49, 49);
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
 
@@ -59,9 +61,11 @@ button:focus-visible {
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
-    background-color: #ffffff;
+    background-color: #e2e2e2;
     --modal-bg: rgb(194, 194, 194);
     --text-color: #213547;
+    --rcounter: white;
+    --rcounter-bg: rgb(49, 49, 49);
   }
   a:hover {
     color: #747bff;

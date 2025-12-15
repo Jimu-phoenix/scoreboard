@@ -72,7 +72,7 @@ export default function ScoreBoard(){
             
         <section className="score1">
 
-            <h2 className="teamName">{`Team ${team1}`}</h2>
+            <h2 className="teamName">{`Player ${team1}`}</h2>
              
             <button onClick={()=>increase(1)} className="scorebtn">+</button>
             <div className="counter">
@@ -96,7 +96,7 @@ export default function ScoreBoard(){
         <hr />
 
          <section className="score2">
-            <h2 className="teamName">{`Team ${team2}`}</h2>
+            <h2 className="teamName">{`Player ${team2}`}</h2>
             <button onClick={()=>increase(2)} className="scorebtn">+</button>
             
 
