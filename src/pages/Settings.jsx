@@ -111,12 +111,12 @@ export default function Settings(){
                         <input type="text" name='mode' id='mode' value="1v1" hidden readOnly/>
 
                         <div className="TeamxName">
-                            <label htmlFor="Team1">Team 1</label>
+                            <label htmlFor="Team1">Player 1</label>
                             <input type="text" name='Team1' id='Team1'/>
                         </div>
 
                         <div className="TeamxName">
-                            <label htmlFor="Team2">Team 2</label>
+                            <label htmlFor="Team2">Player 2</label>
                             <input type="text" name='Team2' id='Team2'/>
                         </div>
 
@@ -126,7 +126,7 @@ export default function Settings(){
                 </div> : 
                 <div className="p2">
                     <h1>2+ Or More Players</h1>
-                    <h2>Coming Soon!</h2>
+                    <button>Create Game Link</button>
                 </div>
                 
                 }
